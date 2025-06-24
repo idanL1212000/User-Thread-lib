@@ -68,9 +68,9 @@ Compile Your Application: Compile your application's source files.
 Link with the Library: Link your compiled application with libuthreads.a.
 Here's an example of how you might compile and link a simple application (e.g., main.cpp) that uses the uthreads library:
 
-Bash
-
+```bash
 g++ -Wall -std=c++11 -g main.cpp -L. -luthreads -o my_app
+```
 main.cpp: Your application's main source file.
 -L.: Tells the linker to look for libraries in the current directory (.).
 -luthreads: Tells the linker to link with libuthreads.a (the lib prefix and .a suffix are implied).
