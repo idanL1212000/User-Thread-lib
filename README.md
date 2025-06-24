@@ -44,19 +44,20 @@ To compile the `uthreads` library, navigate to the directory containing the `uth
 
 ```bash
 make
+```
 
 This will create libuthreads.a, the static library.
 
 To clean up the generated object files and the library, use:
 
-Bash
-
+```bash
 make clean
+```
 To create a tarball for submission, run:
 
-Bash
-
+```bash
 make tar
+```
 This will create ex2.tar containing README, uthreads.cpp, demo_jmp.c, and Makefile.
 
 Integrating with Your Application
