@@ -1,3 +1,5 @@
+# User-Level Thread Library
+
 This project implements a user-level thread library in C++.
 
 ## Features
@@ -38,4 +40,38 @@ The library utilizes `setjmp` and `longjmp` for context switching between user-l
 
 ## Compilation and Usage
 
-**(Instructions for compilation and usage would typically go here, e.g., how to compile the `uthreads.cpp` and `demo_jmp.c` files and link them with an example program.)**
+To compile the `uthreads` library, navigate to the directory containing the `uthreads.cpp`, `demo_jmp.c`, and `Makefile` files, and run the following command:
+
+```bash
+make
+
+This will create libuthreads.a, the static library.
+
+To clean up the generated object files and the library, use:
+
+Bash
+
+make clean
+To create a tarball for submission, run:
+
+Bash
+
+make tar
+This will create ex2.tar containing README, uthreads.cpp, demo_jmp.c, and Makefile.
+
+Integrating with Your Application
+To use this library in your own C++ application, you will need to:
+
+Include the Header: Ensure uthreads.h (assuming such a header exists or you define the function prototypes yourself) is accessible in your application's source files.
+Compile Your Application: Compile your application's source files.
+Link with the Library: Link your compiled application with libuthreads.a.
+Here's an example of how you might compile and link a simple application (e.g., main.cpp) that uses the uthreads library:
+
+Bash
+
+g++ -Wall -std=c++11 -g main.cpp -L. -luthreads -o my_app
+main.cpp: Your application's main source file.
+-L.: Tells the linker to look for libraries in the current directory (.).
+-luthreads: Tells the linker to link with libuthreads.a (the lib prefix and .a suffix are implied).
+-o my_app: Specifies the output executable name as my_app.
+Remember to replace main.cpp with the actual name of your application's source file.
